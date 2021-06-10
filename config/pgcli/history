@@ -1,0 +1,51 @@
+
+# 2018-11-28 11:47:35.011896
++          SELECT * FROM (
++            SELECT student_interim_id,
++            event_type,
++            DENSE_RANK() OVER (
++              PARTITION BY student_interim_id
++              ORDER BY created_at DESC
++            ) AS event_number
++            FROM student_interim_events
++            LEFT JOIN student_interims ON (student_interims.id = student_interim_events.student_interim_id)
++            LEFT JOIN interims ON (interims.id = student_interims.interim_id)
++            LEFT JOIN rounds ON (rounds.id = interims.round_id)
++            WHERE rounds.id = 4
++          ) AS ranked_student_interims
++          WHERE event_number = 1 AND event_type = 1;
+
+# 2018-11-28 11:47:51.429416
++          SELECT * FROM (
++            SELECT student_interim_id,
++            event_type,
++            DENSE_RANK() OVER (
++              PARTITION BY student_interim_id
++              ORDER BY event_at DESC
++            ) AS event_number
++            FROM student_interim_events
++            LEFT JOIN student_interims ON (student_interims.id = student_interim_events.student_interim_id)
++            LEFT JOIN interims ON (interims.id = student_interims.interim_id)
++            LEFT JOIN rounds ON (rounds.id = interims.round_id)
++            WHERE rounds.id = 4
++          ) AS ranked_student_interims
++          WHERE event_number = 1 AND event_type = 1;
+
+# 2018-11-28 11:48:00.963139
++          SELECT * FROM (
++            SELECT student_interim_id,
++            event_type,
++            DENSE_RANK() OVER (
++              PARTITION BY student_interim_id
++              ORDER BY event_at DESC
++            ) AS event_number
++            FROM student_interim_events
++            LEFT JOIN student_interims ON (student_interims.id = student_interim_events.student_interim_id)
++            LEFT JOIN interims ON (interims.id = student_interims.interim_id)
++            LEFT JOIN rounds ON (rounds.id = interims.round_id)
++            WHERE rounds.id = 4
++          ) AS ranked_student_interims
++          WHERE event_number = 1 AND event_type = 2;
+
+# 2018-11-28 13:51:30.485558
++exit
