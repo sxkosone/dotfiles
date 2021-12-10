@@ -3,6 +3,8 @@ prompt pure
 
 PURE_PROMPT_SYMBOL="♥"
 
+PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
+
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit
@@ -42,7 +44,6 @@ alias schema_fixup="rails db:drop db:create db:schema:load && rails db:migrate"
 alias total_seed="rails db:drop db:create db:schema:load && rails db:seed"
 
 # Git aliases
-alias gp="git pull"
 alias gk="git checkout"
 alias gkb="git checkout -b"
 alias gaa="git add ."
@@ -52,8 +53,10 @@ alias gd="git diff"
 alias grm="git rebase -i origin/trunk"
 alias gpf="git push --force-with-lease"
 alias gbd="git branch -d"
+alias gpu="git push -u origin HEAD"
 alias uncommit="git reset --soft HEAD^"
 alias empty="git commit --allow-empty -m '[rebuild]'"
+
 alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias push_new="git push --set-upstream origin"
 alias yarn_install="curl --compressed -o- -L https://yarnpkg.com/install.sh | bash"

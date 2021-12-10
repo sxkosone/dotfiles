@@ -46,9 +46,6 @@ require('nvim_comment').setup()
 vim.api.nvim_set_keymap('n', '<C-\\>', ':CommentToggle<CR>', {noremap = true})
 vim.api.nvim_set_keymap('x', '<C-\\>', ':CommentToggle<CR>', {noremap = true})
 
--- === devdocs ===
-vim.api.nvim_set_keymap('n', 'K', '<Plug>(devdocs-under-cursor)', {silent = true})
-
 -- === diffview ===
 require('sk-diffview')
 
