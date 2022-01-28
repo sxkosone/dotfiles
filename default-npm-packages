@@ -1,8 +1,6 @@
 diagnostic-languageserver
 eslint
-eslint
 eslint_d
-git-split-diffs
 neovim
 npm
 pure-prompt

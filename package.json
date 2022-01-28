@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "diagnostic-languageserver": "^1.14.2",
+    "eslint_d": "^11.1.1"
+  }
+}

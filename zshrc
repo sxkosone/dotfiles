@@ -2,20 +2,18 @@ autoload -U promptinit; promptinit
 prompt pure
 
 PURE_PROMPT_SYMBOL="♥"
-
 PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
 
-. $HOME/.asdf/asdf.sh
+export PATH=/opt/homebrew/bin:$PATH
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit
 compinit
 
 export VISUAL="nvim"
 export EDITOR=$VISUAL
-
 export NODEJS_CHECK_SIGNATURES=no
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -62,4 +60,4 @@ alias push_new="git push --set-upstream origin"
 alias yarn_install="curl --compressed -o- -L https://yarnpkg.com/install.sh | bash"
 
 # zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
