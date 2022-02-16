@@ -1,9 +1,3 @@
-autoload -U promptinit; promptinit
-prompt pure
-
-PURE_PROMPT_SYMBOL="♥"
-PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
-
 export PATH=/opt/homebrew/bin:$PATH
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
@@ -14,6 +8,7 @@ compinit
 export VISUAL="nvim"
 export EDITOR=$VISUAL
 export NODEJS_CHECK_SIGNATURES=no
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -35,6 +30,13 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+# pure prompt init must happen at the end of path settings
+autoload -U promptinit; promptinit
+prompt pure
+
+PURE_PROMPT_SYMBOL="♥"
+PROMPT='[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
 
 # Rails alias
 alias migrate="bundle exec rails db:migrate db:rollback && bundle exec rails db:migrate db:test:prepare"
