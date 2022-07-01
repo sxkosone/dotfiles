@@ -47,9 +47,6 @@ require('nvim_comment').setup()
 vim.api.nvim_set_keymap('n', '<C-\\>', ':CommentToggle<CR>', {noremap = true})
 vim.api.nvim_set_keymap('x', '<C-\\>', ':CommentToggle<CR>', {noremap = true})
 
--- === diffview ===
-require('sk-diffview')
-
 -- === fzf.vim ===
 vim.api.nvim_set_keymap('n', '<C-b>', ':wa<CR>:Buffers<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '\\', ":Rg<SPACE>-F '' -g '*.'", {noremap = true})

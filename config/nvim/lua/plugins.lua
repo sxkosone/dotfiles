@@ -27,7 +27,8 @@ return require('packer').startup(function()
   -- === completion ===
   use 'https://github.com/neovim/nvim-lspconfig'
   use 'https://github.com/hrsh7th/nvim-compe'
-  use 'https://github.com/glepnir/lspsaga.nvim'
+  -- TODO fix lspsage, commands error
+  -- use 'https://github.com/glepnir/lspsaga.nvim'
   use 'https://github.com/nvim-telescope/telescope.nvim'
   use 'https://github.com/kabouzeid/nvim-lspinstall'
   use 'https://github.com/nvim-lua/popup.nvim'
@@ -52,7 +53,6 @@ return require('packer').startup(function()
   -- === git ===
   use 'https://github.com/junegunn/gv.vim'
   use 'https://github.com/mhinz/vim-signify'
-  use 'https://github.com/sindrets/diffview.nvim'
 
   -- === language plugins ===
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

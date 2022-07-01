@@ -31,6 +31,7 @@ require'lspconfig'.diagnosticls.setup{
     linters = {
       eslint = {
         command = 'eslint_d',
+        -- can use eslint for slower linting
         -- command = './node_modules/.bin/eslint',
         rootPatterns = { '.git' },
         debounce = 100,
