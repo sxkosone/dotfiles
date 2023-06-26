@@ -39,3 +39,6 @@ augroup resize
   autocmd VimResized * :wincmd =
 augroup END
 ]])
+
+-- === run prettier (or any autoformatting) on save ===
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
