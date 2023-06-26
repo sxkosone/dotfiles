@@ -14,6 +14,8 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export AWS_VAULT_PROMPT=ykman
+export CONSOLE_USER=susanna
 
 _fzf_compgen_path() {
   rg --files "$1" | with-dir "$1"
