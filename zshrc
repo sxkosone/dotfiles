@@ -59,7 +59,7 @@ alias gbd="git branch -d"
 alias gpu="git push -u origin HEAD"
 alias uncommit="git reset --soft HEAD^"
 alias empty="git commit --allow-empty -m '[rebuild]'"
-alias gca = 'git commit --amend --no-edit'
+alias gca="git commit --amend --no-edit"
 
 alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias push_new="git push --set-upstream origin"
