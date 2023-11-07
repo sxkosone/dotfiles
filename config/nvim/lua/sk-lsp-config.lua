@@ -1,16 +1,21 @@
+require('mason').setup()
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "html",
+    "pyright",
+    "solargraph",
+    "tsserver",
+    "jsonls",
+    "stylelint_lsp",
+    "diagnosticls",
+  },
+})
+
 require'lspconfig'.html.setup{}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.solargraph.setup{}
 require'lspconfig'.tsserver.setup{}
-require'lspconfig'.jsonls.setup {
-  commands = {
-    Format = {
-      function()
-        vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
-      end
-    }
-  }
-}
+require'lspconfig'.jsonls.setup { }
 require'lspconfig'.stylelint_lsp.setup {
   settings = {
     stylelintplus = {
@@ -30,7 +35,7 @@ require'lspconfig'.diagnosticls.setup{
   init_options = {
     linters = {
       eslint = {
-        command = 'eslint_d',
+        command = 'eslint',
         -- can use eslint for slower linting
         -- command = './node_modules/.bin/eslint',
         rootPatterns = { '.git' },

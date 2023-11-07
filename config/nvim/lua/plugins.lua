@@ -20,6 +20,13 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- === external editor tooling management ===
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
   -- === colorscheme(s) ===
   use 'https://github.com/folke/tokyonight.nvim'
   use 'https://github.com/navarasu/onedark.nvim'
@@ -29,12 +36,10 @@ return require('packer').startup(function()
   use 'https://github.com/hrsh7th/nvim-compe'
   -- TODO fix lspsage, commands error
   -- use 'https://github.com/glepnir/lspsaga.nvim'
-  -- specify prior telescope version to use because newest version requires neovim 9.0
   use {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', branch = '0.1.4',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'https://github.com/kabouzeid/nvim-lspinstall'
   use 'https://github.com/nvim-lua/popup.nvim'
   use 'https://github.com/nvim-lua/plenary.nvim'
   use 'https://github.com/folke/lsp-trouble.nvim'
