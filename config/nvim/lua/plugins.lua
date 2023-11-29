@@ -22,22 +22,30 @@ return require('packer').startup(function()
 
   -- === external editor tooling management ===
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    'neovim/nvim-lspconfig',
+    requires = {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+    },
   }
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
+
+  -- === prettier plugin for formatting ===
+  use('MunifTanjim/prettier.nvim')
 
   -- === colorscheme(s) ===
   use 'https://github.com/folke/tokyonight.nvim'
   use 'https://github.com/navarasu/onedark.nvim'
 
   -- === completion ===
-  use 'https://github.com/neovim/nvim-lspconfig'
   use 'https://github.com/hrsh7th/nvim-compe'
   -- TODO fix lspsage, commands error
   -- use 'https://github.com/glepnir/lspsaga.nvim'
   use {
-    'nvim-telescope/telescope.nvim', branch = '0.1.4',
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'https://github.com/nvim-lua/popup.nvim'
