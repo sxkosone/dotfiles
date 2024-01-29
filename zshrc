@@ -67,8 +67,3 @@ alias yarn_install="curl --compressed -o- -L https://yarnpkg.com/install.sh | ba
 
 # zsh-syntax-highlighting
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Export here because in `.env` file seems to be too late
-# Suppress noisy Datadog logs whenever I open rails console
-# Relevant issue: https://github.com/DataDog/dd-trace-rb/issues/3084
-export DD_TRACE_STARTUP_LOGS=false
