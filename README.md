@@ -14,7 +14,10 @@ My macOS zsh configuration.
 
 ```bash
 git clone git@github.com:sxkosone/dotfiles.git ~/dotfiles
+
+# Symlink configs to where they're expected
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/nvim ~/.config/nvim
 ```
 
 ### Dependencies (Homebrew)
