@@ -1,12 +1,13 @@
 # dotfiles
 
-My macOS zsh configuration.
+My macOS zsh and Neovim configuration.
 
 ## What's in here
 
 - [Pure](https://github.com/sindresorhus/pure) prompt with a custom `♥` symbol and timestamp
 - [fzf](https://github.com/junegunn/fzf) fuzzy finder with [ripgrep](https://github.com/BurntSushi/ripgrep) and [bat](https://github.com/sharkdp/bat) preview
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [Neovim](https://neovim.io/) with [LazyVim](https://www.lazyvim.org/)
 - Git aliases
 - Node.js via nvm, Go 1.23, Docker
 
@@ -23,8 +24,10 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 ### Dependencies (Homebrew)
 
 ```bash
-brew install fzf ripgrep bat pure zsh-syntax-highlighting zsh-completions
+brew install neovim fzf ripgrep bat pure zsh-syntax-highlighting zsh-completions
 ```
+
+Neovim plugins will install automatically on first launch via [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 ## Git aliases
 
