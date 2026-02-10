@@ -25,19 +25,24 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 
 ```bash
 brew install neovim fzf ripgrep bat pure zsh-syntax-highlighting zsh-completions
+
 ```
 
 Neovim plugins will install automatically on first launch via [lazy.nvim](https://github.com/folke/lazy.nvim).
 
+### Additional
+
+`brew install the_silver_searcher`
+
 ## Git aliases
 
-| Alias      | Command                      |
-|------------|------------------------------|
-| `gk`       | `git checkout`               |
-| `gaa`      | `git add .`                  |
-| `gc`       | `git commit`                 |
-| `gb`       | `git branch`                 |
-| `gpf`      | `git push --force-with-lease`|
-| `gmm`      | `git merge origin/master`    |
-| `gp`       | `gh pr list -a@me`           |
-| `uncommit` | `git reset --soft HEAD~1`    |
+| Alias      | Command                       |
+| ---------- | ----------------------------- |
+| `gk`       | `git checkout`                |
+| `gaa`      | `git add .`                   |
+| `gc`       | `git commit`                  |
+| `gb`       | `git branch`                  |
+| `gpf`      | `git push --force-with-lease` |
+| `gmm`      | `git merge origin/master`     |
+| `gp`       | `gh pr list -a@me`            |
+| `uncommit` | `git reset --soft HEAD~1`     |
