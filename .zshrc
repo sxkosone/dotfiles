@@ -26,8 +26,6 @@ prompt pure
 PURE_PROMPT_SYMBOL="♥"
 PROMPT='[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
 
-alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-
 # Khan aliases
 # datastore emulator
 alias dsadmin='npx dsadmin --project=khan-academy --datastore-emulator-host=localhost:8201'
