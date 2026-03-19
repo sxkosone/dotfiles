@@ -39,6 +39,7 @@ alias gpf='git push --force-with-lease'
 alias gmm='git merge origin/master'
 alias gp='gh pr list -a@me'
 alias uncommit='git reset --soft HEAD~1'
+alias recommit='commit -C ORIG_HEAD'
 
 # zsh-syntax-highlighting
 # must be sourced at the end of the .zshrc file
@@ -59,7 +60,3 @@ export PATH="/opt/homebrew/opt/go@1.23/bin:$PATH"
 # Add OpenJDK 21 to PATH for gcloud datastore emulator
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
